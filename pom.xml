@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.2.6.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.yusuf</groupId>
+	<artifactId>sport</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>sport</name>
+	<description>Demo project for Spring Boot</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+		
+		<actuator.version>2.2.6.RELEASE</actuator.version>
+		<modelmapper.version>2.3.7</modelmapper.version>
+		<postgresql.version>42.2.12</postgresql.version>
+		<data-jpa.version>2.2.6.RELEASE</data-jpa.version>
+		<envers.version>5.4.14.Final</envers.version>
+		<liquibase-core.version>3.8.9</liquibase-core.version>
+		<liquibase-hibernate5.version>3.8</liquibase-hibernate5.version>
+		<liquibase-maven-plugin.version>3.8.9</liquibase-maven-plugin.version>
+		<spring-boot-starter-thymeleaf.version>2.2.6.RELEASE</spring-boot-starter-thymeleaf.version>
+		<spring-boot-starter-web.version>2.2.6.RELEASE</spring-boot-starter-web.version>
+		<spring-boot-devtools.version>2.2.6.RELEASE</spring-boot-devtools.version>
+		<lombok.version>1.18.12</lombok.version>
+		<spring-boot-starter-test.version>2.2.6.RELEASE</spring-boot-starter-test.version>
+		<thymeleaf-extras-springsecurity5.version>3.0.4.RELEASE</thymeleaf-extras-springsecurity5.version>
+		<spring-boot-starter-security.version>2.2.6.RELEASE</spring-boot-starter-security.version>
+		<spring-security-test.version>5.3.1.RELEASE</spring-security-test.version>
+		<spring-data-rest-hal-explorer.version>3.2.6.RELEASE</spring-data-rest-hal-explorer.version>
+		<spring-boot-starter-data-rest.version>2.2.6.RELEASE</spring-boot-starter-data-rest.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+			<version>${actuator.version}</version><!--$NO-MVN-MAN-VER$-->
+		</dependency>
+		<dependency>
+		    <groupId>org.modelmapper</groupId>
+		    <artifactId>modelmapper</artifactId>
+		    <version>${modelmapper.version}</version>
+		</dependency>
+
+		<!-- Database  -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${postgresql.version}</version><!--$NO-MVN-MAN-VER$-->
+        </dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<version>${data-jpa.version}</version><!--$NO-MVN-MAN-VER$-->
+		</dependency>
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-envers</artifactId>
+		    <version>${envers.version}</version><!--$NO-MVN-MAN-VER$-->
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>${spring-boot-starter-web.version}</version><!--$NO-MVN-MAN-VER$-->
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+			<version>${spring-boot-devtools.version}</version><!--$NO-MVN-MAN-VER$-->
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+			<version>${lombok.version}</version><!--$NO-MVN-MAN-VER$-->
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.junit.vintage</groupId>
+					<artifactId>junit-vintage-engine</artifactId>
+				</exclusion>
+			</exclusions>
+			<version>${spring-boot-starter-test.version}</version><!--$NO-MVN-MAN-VER$-->
+		</dependency>
+
+		<!-- webjar bootstrap and jquery dependencies -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>webjars-locator</artifactId>
+			<version>0.39</version>
+	  	</dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>3.3.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>3.5.0</version>
+        </dependency>
+
+		<dependency>
+		    <groupId>org.springframework.data</groupId>
+		    <artifactId>spring-data-rest-hal-explorer</artifactId>
+		    <version>${spring-data-rest-hal-explorer.version}</version><!--$NO-MVN-MAN-VER$-->
+		</dependency>
+
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+		    <artifactId>spring-boot-starter-data-rest</artifactId>
+		    <version>${spring-boot-starter-data-rest.version}</version><!--$NO-MVN-MAN-VER$-->
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
